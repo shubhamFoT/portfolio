@@ -8,88 +8,78 @@
 }
 
 body {
-    display: flex;
-    background: #f4f4f4;
+    background: #ececec;
     color: #333;
+    text-align: center;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    background: #222;
+/* Header */
+header {
+    background: #444;
     color: white;
-    height: 100vh;
-    position: fixed;
     padding: 20px;
 }
 
-.sidebar h2 {
-    text-align: center;
-    margin-bottom: 20px;
+header h1 {
+    margin-bottom: 5px;
 }
 
-.sidebar nav ul {
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-.sidebar nav ul li {
-    margin: 15px 0;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.sidebar nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    display: block;
 }
 
-.sidebar nav ul li a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main Content */
-main {
-    margin-left: 250px;
-    padding: 40px;
-    width: 100%;
-}
-
-.section {
-    margin-bottom: 60px;
-}
-
-h1, h2 {
-    color: #222;
+/* Sections */
+section {
+    margin: 40px 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Skills */
-.skills-list {
-    list-style: none;
-    padding: 0;
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.skills-list li {
-    background: #ddd;
-    padding: 10px;
-    margin: 5px 0;
+.skill-box {
+    background: #444;
+    color: white;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
 /* Contact Form */
 input, textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background: #222;
+    padding: 10px 20px;
+    background: #444;
     color: white;
     font-weight: bold;
     border: none;
@@ -98,15 +88,13 @@ button {
 }
 
 button:hover {
-    background: #444;
+    background: #666;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 15px;
-    background: #222;
+    background: #444;
     color: white;
-    position: relative;
-    margin-left: 250px;
+    padding: 15px;
+    margin-top: 20px;
 }
