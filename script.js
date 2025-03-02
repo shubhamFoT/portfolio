@@ -21,10 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
         form.reset();
     });
 
-    // Change About Text Functionality
-    document.getElementById("change-text").addEventListener("click", function() {
-        const aboutText = document.getElementById("about-text");
-        aboutText.textContent = "This text has been changed using JavaScript!";
-        aboutText.style.color = "blue";
+    // Dynamic Skill Level Change
+    document.querySelectorAll(".progress").forEach((bar) => {
+        bar.addEventListener("click", function() {
+            let newWidth = Math.floor(Math.random() * 101) + "%";
+            this.style.width = newWidth;
+        });
     });
 });
