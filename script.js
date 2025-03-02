@@ -1,6 +1,23 @@
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    document.getElementById("response").innerText = "Message sent successfully!";
-    document.getElementById("response").style.color = "green";
-    this.reset();
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contact-form");
+    const responseMessage = document.getElementById("response");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            responseMessage.textContent = "Please fill out all fields.";
+            responseMessage.style.color = "red";
+            return;
+        }
+
+        responseMessage.textContent = "Message sent successfully!";
+        responseMessage.style.color = "green";
+
+        form.reset();
+    });
 });
