@@ -20,4 +20,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         form.reset();
     });
+
+    // Change About Text Functionality
+    document.getElementById("change-text").addEventListener("click", function() {
+        const aboutText = document.getElementById("about-text");
+        aboutText.textContent = "This text has been changed using JavaScript!";
+        aboutText.style.color = "blue";
+    });
 });
